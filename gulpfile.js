@@ -14,7 +14,7 @@ gulp.task('YJsass',function () {
         .pipe(sass({outputStyle:'compact'}).on('error',sass.logError))
 
         //文档流.  输出文档的路径
-        .pipe(gulp.dest('./src/css'))
+        .pipe(gulp.dest('./src/css/'))
 
         //监听成功后,利用browser-sync 自动刷新页面
         .pipe(browserSync.reload({stream:true}))
@@ -46,5 +46,5 @@ gulp.task('server',function () {
     });
 
     //监听sass文件,有修改时执行编译任务
-    gulp.watch('./src/sass/YJsass.scss',['YJsass']);
+    gulp.watch('./src/sass/*.scss',['YJsass']);
 });

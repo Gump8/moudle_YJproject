@@ -1,15 +1,24 @@
 @charset "UTF-8";
 
+@import "commom.scss";
 .headTop {
     margin:0px auto;
     .wrap {
         width: 1210px;
-
+        margin:0px auto;
     }
 
+    .headClient {
+        & > * {
+            display: inline-block;
+        }
+    }
     .headSearch {
         & > * {
             float: left;
+        }
+        .col-lg-6 {
+            width: 500px;
         }
     }
 
@@ -18,3 +27,15 @@
     }
 }
 
+.footBottom {
+    width: 1210px;
+    margin: 0 auto;
+    .foot {
+        & > * {
+            display: inline-block;
+        }
+    }
+    div:last-child {
+        text-align: center;
+    }
+}
