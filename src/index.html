@@ -6,12 +6,16 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>YJindex</title>
-    <script src="js/jquery-3.1.1.js"></script>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-
+    <script src="assets/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="assets/bootstrap.min.css">
+    <!--<style>-->
+        <!--.headSearch > *{-->
+            <!--float: left;-->
+        <!--}-->
+    <!--</style>-->
 </head>
 <body>
-<header>
+<header class="headTop">
     <div class="wrap">
         <div class="headClient">
             <p><span>电视直播</span><span>电子型录</span><span>购物专家</span></p>
@@ -19,19 +23,28 @@
             <p><span>我的订单</span><span>商城积分</span><span>帮助中心</span><span>收藏宜佳</span></p>
         </div>
 
-        <div>
+        <div class="headSearch">
             <img src="css/img/new_logo.gif" alt="">
             <img src="css/img/easygo_merchant.jpg" alt="">
             <div class="col-lg-6">
                 <div class="input-group">
                     <input type="text" class="form-control">
                     <span class="input-group-btn">
-                        <button class="btn btn-default" type="button">Go!</button>
+                        <button class="btn btn-default" type="button">搜索</button>
                     </span>
                 </div>
+                <p>
+                    <span>热门搜索：</span><span> 腕表 </span>
+                    <span> 床品 </span><span> 面包机 </span>
+                    <span> 炒锅 </span><spam> 套组 </spam>
+                </p>
             </div>
             <img src="css/img/lnWX.png" alt="">
             <p><span></span>去购物车购物</p>
+        </div>
+
+        <div class="headNav">
+
         </div>
     </div>
 </header>

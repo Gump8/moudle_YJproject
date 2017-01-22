@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.headTop {
+    margin:0px auto;
+    .wrap {
+        width: 1210px;
+
+    }
+
+    .headSearch {
+        & > * {
+            float: left;
+        }
+    }
+
+    .headNav {
+
+    }
+}
+
