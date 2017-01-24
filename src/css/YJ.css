@@ -1,3 +1,5 @@
+ul, li, p { margin: 0px; padding: 0px; }
+
 ul { list-style: none; }
 
 a { text-decoration: none; }
@@ -6,14 +8,60 @@ a { text-decoration: none; }
 
 .headTop .wrap { width: 1210px; margin: 0px auto; }
 
+.headTop .headClient { font-size: 12px; background-color: #f6f6f6; text-align: center; }
+
+.headTop .headClient p { height: 31px; line-height: 31px; }
+
+.headTop .headClient p:first-child { float: left; }
+
+.headTop .headClient p:first-child span { padding: 0 13px; }
+
+.headTop .headClient p:last-child { float: right; }
+
+.headTop .headClient p:last-child span { padding: 0 13px; }
+
 .headTop .headClient > * { display: inline-block; }
 
 .headTop .headSearch > * { float: left; }
 
-.headTop .headSearch .col-lg-6 { width: 500px; }
+.headTop .headSearch:after { content: ''; display: block; clear: both; }
 
-.footBottom { width: 1210px; margin: 0 auto; }
+.headTop .headSearch .col-lg-6 { margin-top: 18px; width: 500px; }
 
-.footBottom .foot > * { display: inline-block; }
+.headTop .headSearch .col-lg-6 .input-group input { border-color: red; }
 
-.footBottom div:last-child { text-align: center; }
+.headTop .headSearch .col-lg-6 .input-group span, .headTop .headSearch .col-lg-6 .input-group button { border: 0px solid #f00; font-size: 14px; font-weight: bold; background-color: red; color: white; }
+
+.headTop .headSearch .col-lg-6 p { font-size: 12px; }
+
+.headTop .headSearch .SrShop { line-height: 90px; margin-left: 20px; }
+
+.headTop .headSearch .SrShop > * { display: inline-block; }
+
+.headTop .headNav { font-size: 14px; font-weight: bold; }
+
+.headTop .headNav ul { border-color: red; }
+
+.headTop .headNav ul a { color: #323232; }
+
+.headTop .headNav ul li:first-child a { background-color: #c82324; border-color: red; color: #FFF; font-size: 14px; font-weight: bold; }
+
+.headTop .headNav ul li:last-child { float: right; }
+
+.headTop .headNav ul li:last-child a { color: #f00; }
+
+.footBottom .wrap { background-color: #f7f7f7; width: 1210px; margin: 0 auto; }
+
+.footBottom .wrap .foot > * { display: inline-block; }
+
+.footBottom .wrap .foot ul { font-size: 12px; margin-top: 26px; width: 156px; border-left: 1px dashed black; }
+
+.footBottom .wrap .foot ul a { color: black; }
+
+.footBottom .wrap .foot ul li { padding-left: 14px; }
+
+.footBottom .wrap .foot ul li:first-child { font-size: 14px; font-weight: bold; margin-bottom: 7px; margin-top: 3px; }
+
+.footBottom .wrap div:last-child { text-align: center; }
+
+.footBottom .wrap div:last-child p { font-size: 12px; }
