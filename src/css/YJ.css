@@ -38,7 +38,7 @@ a { text-decoration: none; }
 
 .headTop .headSearch .SrShop > * { display: inline-block; }
 
-.headTop .headNav { font-size: 14px; font-weight: bold; }
+.headTop .headNav { background-color: #f7f7f7; font-size: 14px; font-weight: bold; border-top: 1px solid #dfdfdf; }
 
 .headTop .headNav ul { border-color: red; }
 
@@ -65,3 +65,33 @@ a { text-decoration: none; }
 .footBottom .wrap div:last-child { text-align: center; }
 
 .footBottom .wrap div:last-child p { font-size: 12px; }
+
+#loginReg { border: 1px solid #eee; width: 1210px; height: 545px; margin: 8px auto; }
+
+#loginReg input { width: 146px; height: 28px; border-radius: 3px; }
+
+#loginReg > div { float: left; }
+
+#loginReg #login, #loginReg #register { border: 1px solid #eee; width: 470px; height: 545px; border-right: none; padding-left: 12px; font-size: 14px; text-align: left; }
+
+#loginReg #login div, #loginReg #register div { margin: 14px 0; }
+
+#loginReg #login div > *, #loginReg #register div > * { display: inline-block; }
+
+#loginReg #login h2, #loginReg #register h2 { font-weight: bolder; border-bottom: 2px solid #eee; padding-bottom: 5px; }
+
+#loginReg #login h2 span:last-child, #loginReg #register h2 span:last-child { font-size: 12px; color: red; }
+
+#loginReg #login span:last-child, #loginReg #register span:last-child { font-size: 12px; color: #999; }
+
+#loginReg #login div:last-child button, #loginReg #register div:last-child button { background-color: orange; color: white; }
+
+#loginReg #register { border: 1px solid #eee; width: 638px; height: 545px; border-right: none; }
+
+#loginReg #register div > * { display: inline-block; }
+
+#loginReg #register textarea { color: #666; background: #f9f9f9; border-radius: 3px; font-size: 12px; }
+
+#loginReg #register div:last-child input { width: 12px; height: 12px; }
+
+#loginReg #register div:last-child span { font-size: 12px; }
