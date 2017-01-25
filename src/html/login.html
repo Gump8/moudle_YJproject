@@ -17,14 +17,20 @@
 
             //注册
             $('#reg').on('click',function () {
-                $.post('../php/conExc.php',{
+                $.post('../php/register.php',{
 
                     tel: $('#tel').val(),
                     email: $('#email').val(),
-                    password: $('#password').val(),
+                    password: $('#password').val()
 
-                },function (data) {
-                    console.log(data);
+                },function (response) {
+                    console.log(response);
+//                    var $res = eval('(' + response + ')');
+//
+//                    //注册成功后跳转到主页
+//                    if ($res.state) {
+//                        window.location.href = '../index.html';
+//                    }
                 })
             })
         });

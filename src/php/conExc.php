@@ -15,12 +15,12 @@
             echo "连接 数据库 失败" . mysqli_connect_error();
             return null;
         }
-        else { echo "connected"; }
+//        else { echo "connected"; }
         //函数返回连接信息
         return $con;
     };
 
-    connect();
+//    connect();
 
     //执行查询语句, 返回查询结果
     function query($sql) {
@@ -28,8 +28,8 @@
         //获取连接结果信息
         $con = connect();
 
-        //执行 sql 脚本，也叫数据库脚本，返回一个结果集（对象）
-        $result = mysql_query($con, $sql);
+        //执行 sql 脚本，也叫数据库脚本，返回一个结i果集（对象）
+        $result = mysqli_query($con, $sql);
 
         //定义一个数组, 保存查询结果
         $jsonQuery = array();
@@ -56,7 +56,7 @@
         };
 
         //关闭连接
-        mysqli_close($conn);
+        mysqli_close($con);
         return $jsonQuery;
     };
 
@@ -68,7 +68,7 @@
 
         //执行 sql 脚本, 也叫数据库脚本
         //返回一个布尔值，true|false，不用释放
-        $result = mysql_query($con, $sql);
+        $result = mysqli_query($con, $sql);
 
         //关闭连接
         mysqli_close($con);
