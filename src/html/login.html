@@ -9,7 +9,7 @@
     <script src="../assets/jquery-3.1.1.js"></script>
     <link rel="stylesheet" href="../assets/bootstrap.min.css">
     <link rel="stylesheet" href="../css/YJ.css">
-    <script src="../js/HeadFoot2.js"></script>
+    <script src="../js/HeadFoot.js"></script>
 
     <script>
 
@@ -25,12 +25,12 @@
 
                 },function (response) {
                     console.log(response);
-//                    var $res = eval('(' + response + ')');
-//
-//                    //注册成功后跳转到主页
-//                    if ($res.state) {
-//                        window.location.href = '../index.html';
-//                    }
+                    var $res = eval('(' + response + ')');
+
+                    //注册成功后跳转到主页
+                    if ($res.state) {
+                        window.location.href = 'homepage.html';
+                    }
                 })
             })
         });

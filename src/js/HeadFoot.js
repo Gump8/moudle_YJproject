@@ -1,4 +1,4 @@
 $(function () {
-    $("#index_header").load("html/Header.html?_"+Math.random());
-    $("#index_footer").load("html/Footer.html?_"+Math.random());
+    $("#index_header").load("Header.html?_"+Math.random());
+    $("#index_footer").load("Footer.html?_"+Math.random());
 });
