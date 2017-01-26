@@ -1,5 +1,7 @@
 <?php
-//    session_start();
+    //    session_start();  //  不能重复
+/*****************     判断是否在  登录状态  *********************/
+
 
     //判断是否在  登录状态
     if (isset($_SESSION['logged'])) {

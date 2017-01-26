@@ -11,57 +11,9 @@
     <link rel="stylesheet" href="../css/YJ.css">
     <script src="../js/HeadFoot.js"></script>
 
-    <script>
+    <script src="../js/logReg.js"></script>
 
-        $(function () {
-            //表单验证
-            //获取 register 中的 input jquery对象（实例）
-            //绑定得到焦点事件
-            $('input','#register').on('focus',function () {
-
-                //保存当前 对象
-                var self = $(this);
-
-                //绑定失去焦点事件
-                self.on('blur',function () {
-
-                    //获取当前对象的 id 属性值
-                    var idValue = self.attr('id');
-
-                    //根据 id 属性值进行相应的验证
-                    if (idValue === 'tel') {
-
-                    } else if (idValue === 'email') {
-
-                    } else if (idValue === 'conPass') {
-
-                    }
-                });
-
-            });
-
-            //点击事件  注册
-            $('#reg').on('click',function () {
-
-                $.post('../php/register.php',{
-
-                    //获取输入值  发送到 php
-                    tel: $('#tel').val(),
-                    email: $('#email').val(),
-                    password: $('#password').val()
-
-                },function (response) {
-                    var $res = eval('(' + response + ')');
-
-                    //注册成功后跳转到主页
-                    if ($res.state) {
-                        window.location.href = 'homepage.html';
-                    }
-                })
-            })
-        });
-    </script>
-</head>
+</head
 <body>
 <header id="index_header" class="headTop"> </header>
 
@@ -71,22 +23,23 @@
         <h2>网站会员登录 <span>已注册用户请在此登陆</span></h2>
         <div>
             <span> &nbsp;&nbsp;&nbsp; 账户  </span>
-            <input type="text" class="form-control">
+            <input id="logAcc" type="text" class="form-control">
             <span>输入手机号、邮箱或会员号</span>
         </div>
         <div>
             <span> &nbsp;&nbsp;&nbsp; 密码  </span>
-            <input type="text" class="form-control">
+            <input id="logPass" type="text" class="form-control">
             <span>输入密码</span>
         </div>
         <div>
             <span>验证码&nbsp;</span>
             <input type="text" class="form-control">
+            <span></span>
             <span>更换</span>
         </div>
 
         <div>
-            <button class="btn btn-default" type="submit">登录</button>
+            <button id="log" class="btn btn-default" type="submit">登录</button>
             <span><a href="">忘记密码了</a></span>
         </div>
     </div>
@@ -318,7 +271,7 @@ Cookie是网站安装在会员电脑浏览器 (netscape, internet explorer )上�
 
         <div>
             <button id="reg" class="btn btn-default" type="submit">注册</button>
-            <input type="radio"><span>已阅读本协议，并同意</span>
+            <input type="checkbox" id="agree"><span>已阅读本协议，并同意</span>
         </div>
     </div>
 

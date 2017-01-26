@@ -41,7 +41,7 @@ gulp.task('server',function () {
         // proxy:'http://localhost/E/Web/Write/YJproject/src/php.php',
 
         //监听文件,
-        files:['./src/html/*.html','./src/php/*.php']
+        files:['./src/html/*.html','./src/js/*.js','./src/php/*.php']
 
     });
 
