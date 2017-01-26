@@ -36,7 +36,7 @@
             $queryResult = query($sqlCheck);
 
             //根据查询结果  保存登录状态
-            if ($queryResult > 0) {
+            if (count($queryResult) > 0) {
 
                 //删除原有的  session_start();
                 session_destroy();

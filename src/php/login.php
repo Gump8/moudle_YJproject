@@ -1,9 +1,23 @@
 <?php
     include 'conExc.php';
 
+    //保存前端的 post 数据
     $account = $_POST['account'];
-    $logPass = $_POST{'logPass'];
-//select * from yj where tel = '13333333333' or email = '234235@234.com' and password = '333333'
+    $logPass = $_POST['logPass'];
+
+    //查询脚本
     $querySql = "select * from yj where
         tel = '$account' or email = '$account' and password = '$logPass'";
+
+    $queryResult = query($querySql);
+
+    if (count($queryResult) > 0)
+    {
+        //删除原有的  session_start();
+        session_destroy();
+        session_start();
+        $_SESSION["logged"] = $account;
+
+        echo "{state: true, message:'登录成功!!!'}";
+    }
 ?>

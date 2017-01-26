@@ -9,8 +9,11 @@
     <script src="../assets/jquery-3.1.1.js"></script>
     <link rel="stylesheet" href="../assets/bootstrap.min.css">
     <link rel="stylesheet" href="../css/YJ.css">
+
+    <!--加载头尾 的html代码-->
     <script src="../js/HeadFoot.js"></script>
 
+    <!--登录和注册 的js代码-->
     <script src="../js/logReg.js"></script>
 
 </head
@@ -33,9 +36,10 @@
         </div>
         <div>
             <span>验证码&nbsp;</span>
-            <input type="text" class="form-control">
-            <span></span>
-            <span>更换</span>
+            <input id="authCode" type="text" class="form-control">
+            <span id="code"></span>
+            <span id="reloadCode" style="cursor: pointer">更换</span>
+            <h4></h4>
         </div>
 
         <div>
