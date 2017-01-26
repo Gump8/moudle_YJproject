@@ -6,7 +6,8 @@
 
         //返回已登录的客户名
         //必须要这样拼接  eval 转换为json数据才能成功
-        $res = "'".(string)$_SESSION["logged"]."'";
+        $res = "'".(string)$_SESSION['logged']."'";
+
         echo "{'state': true, 'clientName': " . $res . "}";
 
     } else {

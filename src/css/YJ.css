@@ -10,6 +10,8 @@ a { text-decoration: none; }
 
 .headTop .headClient { font-size: 12px; background-color: #f6f6f6; text-align: center; }
 
+.headTop .headClient #inOut { color: red; font-weight: bolder; cursor: pointer; }
+
 .headTop .headClient p { height: 31px; line-height: 31px; }
 
 .headTop .headClient p:first-child { float: left; }

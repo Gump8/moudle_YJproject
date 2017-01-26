@@ -13,7 +13,11 @@
         font-size: 12px;
         background-color: rgb(246,246,246);
         text-align: center;
-
+        #inOut {
+            color: red;
+            font-weight: bolder;
+            cursor: pointer;
+        }
         p {
             height: 31px;
             line-height: 31px;

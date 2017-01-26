@@ -14,17 +14,43 @@
     <script>
 
         $(function () {
+            //表单验证
+            //获取 register 中的 input jquery对象（实例）
+            //绑定得到焦点事件
+            $('input','#register').on('focus',function () {
 
-            //注册
+                //保存当前 对象
+                var self = $(this);
+
+                //绑定失去焦点事件
+                self.on('blur',function () {
+
+                    //获取当前对象的 id 属性值
+                    var idValue = self.attr('id');
+
+                    //根据 id 属性值进行相应的验证
+                    if (idValue === 'tel') {
+
+                    } else if (idValue === 'email') {
+
+                    } else if (idValue === 'conPass') {
+
+                    }
+                });
+
+            });
+
+            //点击事件  注册
             $('#reg').on('click',function () {
+
                 $.post('../php/register.php',{
 
+                    //获取输入值  发送到 php
                     tel: $('#tel').val(),
                     email: $('#email').val(),
                     password: $('#password').val()
 
                 },function (response) {
-                    console.log(response);
                     var $res = eval('(' + response + ')');
 
                     //注册成功后跳转到主页
@@ -85,7 +111,7 @@
         </div>
         <div>
             <span>密码确认</span>
-            <input type="text" class="form-control">
+            <input id="conPass" type="text" class="form-control">
             <span>请再输入一遍上面填写的密码</span>
         </div>
 
