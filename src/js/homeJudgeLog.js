@@ -13,7 +13,7 @@ $(function () {
             setTimeout(function () {
                 $('#clientName').text(resJson.clientName);
                 $('#inOut').text('退出');
-            },1000);
+            },800);
         }
 
     })

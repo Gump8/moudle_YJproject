@@ -37,7 +37,7 @@ gulp.task('server',function () {
         port:4000,
 
         //代理 proxy:'http://localhost/E/Web/Test/GitGulpSassTest/src/html/tb.html',
-        proxy:'http://localhost/E/Web/Write/YJproject/src/html/login.html',
+        proxy:'http://localhost/E/Web/Write/YJproject/src/html/homepage.html',
         // proxy:'http://localhost/E/Web/Write/YJproject/src/php.php',
 
         //监听文件,

@@ -191,42 +191,34 @@ $(function () {
             }
             //验证输入的账户和密码
             else {
-                if (self.val() === '')
-                {
+                if (self.val() === '') {
                     self.next().text('不能为空').css('color', 'red');
                 }
-                else
-                {
+                else {
                     //验证输入的账户
-                    if (self.attr('id') === 'logAcc')
-                    {
+                    if (self.attr('id') === 'logAcc') {
                         _logAcc = self.val();
 
                         //判断输入是否  tel或email格式
                         if (/^[\w\.\-]+@[a-zA-Z0-9\-]+(\.[a-zA-Z]+){1,2}$/.test(_logAcc)
-                            || /^1[34578]\d{9}$/.test(_logAcc))
-                        {
+                            || /^1[34578]\d{9}$/.test(_logAcc)) {
                             logAcc = true;
                             self.next().text('')
                         }
-                        else
-                        {
+                        else {
                             self.next().text('格式不正确').css('color', 'red');
                             logAcc = false;
                         }
                     }
                     //验证输入的密码
-                    else if (self.attr('id') === 'logPass')
-                    {
+                    else if (self.attr('id') === 'logPass') {
                         _logPass = self.val();
 
-                        if (/^\S{6,20}$/.test(_logPass))
-                        {
+                        if (/^\S{6,20}$/.test(_logPass)) {
                             logPass = true;
                             self.next().text('')
                         }
-                        else
-                        {
+                        else {
                             self.next().text('格式不正确').css('color', 'red');
                             logPass = false;
                         }
@@ -238,14 +230,13 @@ $(function () {
 
     //点击事件 登录
     $log.on('click', function () {
-        console.log(_logAcc,_logPass);
-        $.post('../php/login.php',{
+        console.log(_logAcc, _logPass);
+        $.post('../php/login.php', {
             account: _logAcc,
             logPass: _logPass
-        },function (response) {
+        }, function (response) {
             var res = eval('(' + response + ')');
-            if (res.state)
-            {
+            if (res.state) {
                 window.location.href = 'homepage.html';
             }
         })

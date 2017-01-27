@@ -1,8 +1,19 @@
 <?php
-    if(isset($_SESSION['logged'])){
+//    session_start();
 
-        unset($_SESSION['logged']);
-        echo "{unset: true}";
-//        header("Location: login.html");
-    }
+    	if(isset($_SESSION['logged']))
+    	{
+    	    //退出登录
+    		unset($_SESSION['logged']);
+
+            //判断是否退出成功
+            if(!isset($_SESSION['logged']))
+            {
+                echo "{state: true, message: '退出成功'}";
+            }
+            else
+            {
+                echo "{state: false, message: '退出失败'}";
+            }
+    	}
 ?>
