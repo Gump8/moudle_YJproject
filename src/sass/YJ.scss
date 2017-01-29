@@ -78,33 +78,100 @@
         }
     }
 
-    .headNav {
-        background-color: #f7f7f7;
-        font-size: 14px;
-        font-weight: bold;
-        border-top: 1px solid rgb(223,223,223);
-        ul {
-            border-color: red;
-            a {
-                color: #323232;
-            }
+    .headerNav {
+        position: relative;
+        .headNav {
+            position: relative;
+            background-color: #f7f7f7;
+            font-size: 14px;
+            font-weight: bold;
+            border-top: 1px solid rgb(223,223,223);
+            ul {
 
-            li:first-child a {
-                background-color: #c82324;;
                 border-color: red;
-                color: #FFF;
-                font-size: 14px;
-                font-weight: bold;
+                a {
+                    color: #323232;
+                }
+
+                li:first-child a {
+                    width: 210px;
+                    background-color: #c82324;;
+                    border-color: red;
+                    color: #FFF;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+
+                li:last-child {
+                    float:right;
+                    a {
+                        color: #f00;
+                    }
+                }
             }
 
-            li:last-child {
-                float:right;
-                a {
-                    color: #f00;
+
+        }
+
+        .allgoods {
+            //position: absolute;
+            //z-index: 89;
+            //background-color: #f7f7f7;
+            //
+            //top:42px;
+            //left: 0px;
+            border: 2px solid red;
+            width: 210px;
+            max-height: 415px;
+            p {
+                width: 197px;
+                height: 33px;
+                line-height: 33px;
+                font-size: 14px;
+                border-bottom: #fefefe 1px solid;
+                font-weight: bold;
+                cursor: pointer;
+                background-color: #f9f9f9;
+                color: #c82324;
+                padding-left: 9px;
+                margin-left: 2px;
+            }
+            ul {
+                color: #7e7e7e;
+                font-size: 12px;
+                font-weight: normal;
+                line-height: 29px;
+                li {
+                    padding-left: 20px;
+                    position: relative;
+                    z-index: 99;
                 }
+                div {
+                    display: none;
+                    width: 515px;
+                    height: 245px;
+                    border: 1px solid red;
+                    position: absolute;
+                    z-index: 98;
+                    top: 42px;
+                    left: 209px;
+                    span {
+                        &:first-child {
+                            padding-left: 20px;
+                        }
+                        &:after {
+                            content: '|';
+                            padding: 10px;
+                        }
+                    }
+                }
+            }
+            h6 {
+                text-align: center;
             }
         }
     }
+
 }
 
 .footBottom {

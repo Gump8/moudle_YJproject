@@ -40,17 +40,35 @@ a { text-decoration: none; }
 
 .headTop .headSearch .SrShop > * { display: inline-block; }
 
-.headTop .headNav { background-color: #f7f7f7; font-size: 14px; font-weight: bold; border-top: 1px solid #dfdfdf; }
+.headTop .headerNav { position: relative; }
 
-.headTop .headNav ul { border-color: red; }
+.headTop .headerNav .headNav { position: relative; background-color: #f7f7f7; font-size: 14px; font-weight: bold; border-top: 1px solid #dfdfdf; }
 
-.headTop .headNav ul a { color: #323232; }
+.headTop .headerNav .headNav ul { border-color: red; }
 
-.headTop .headNav ul li:first-child a { background-color: #c82324; border-color: red; color: #FFF; font-size: 14px; font-weight: bold; }
+.headTop .headerNav .headNav ul a { color: #323232; }
 
-.headTop .headNav ul li:last-child { float: right; }
+.headTop .headerNav .headNav ul li:first-child a { width: 210px; background-color: #c82324; border-color: red; color: #FFF; font-size: 14px; font-weight: bold; }
 
-.headTop .headNav ul li:last-child a { color: #f00; }
+.headTop .headerNav .headNav ul li:last-child { float: right; }
+
+.headTop .headerNav .headNav ul li:last-child a { color: #f00; }
+
+.headTop .headerNav .allgoods { border: 2px solid red; width: 210px; max-height: 415px; }
+
+.headTop .headerNav .allgoods p { width: 197px; height: 33px; line-height: 33px; font-size: 14px; border-bottom: #fefefe 1px solid; font-weight: bold; cursor: pointer; background-color: #f9f9f9; color: #c82324; padding-left: 9px; margin-left: 2px; }
+
+.headTop .headerNav .allgoods ul { color: #7e7e7e; font-size: 12px; font-weight: normal; line-height: 29px; }
+
+.headTop .headerNav .allgoods ul li { padding-left: 20px; position: relative; z-index: 99; }
+
+.headTop .headerNav .allgoods ul div { display: none; width: 515px; height: 245px; border: 1px solid red; position: absolute; z-index: 98; top: 42px; left: 209px; }
+
+.headTop .headerNav .allgoods ul div span:first-child { padding-left: 20px; }
+
+.headTop .headerNav .allgoods ul div span:after { content: '|'; padding: 10px; }
+
+.headTop .headerNav .allgoods h6 { text-align: center; }
 
 .footBottom .wrap { background-color: #f7f7f7; width: 1210px; margin: 0 auto; }
 
