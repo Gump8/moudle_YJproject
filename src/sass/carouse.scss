@@ -1,0 +1,87 @@
+
+#carp {
+    z-index: 999;
+    position: relative;
+    top: -178px;
+    left: 930px;
+    color: #989898;
+    span {
+        cursor: pointers;
+        width: 20px;
+        height: 20px;
+        display: inline-block;
+        background-color: #eee;
+        border-radius: 50%;
+    }
+}
+
+#sleft {
+    position: relative;
+    top: -118px;
+    left: 295px;
+}
+
+#sright {
+    position: relative;
+
+    top: -147px;
+    left: 995px;
+}
+
+.Hcarousel {
+
+    width: 720px;
+    height: 422px;
+    position: absolute;
+    z-index: -1;
+    top: 172px;
+    left: 290px;
+    li {
+        float: left;
+        overflow: hidden;
+    }
+    overflow: hidden;
+    & > * {
+        overflow: hidden;
+        float: left;
+    }
+    .carouselIMG {
+        border: 1px solid #dfdfdf;
+
+        width: 720px;
+        height: 278px;
+        ul {
+            position: relative;
+            width: 2160px;
+            height: 278px;
+            li {
+                //float: left;
+            }
+        }
+
+    }
+
+    .carSmall {
+        border: 1px solid #dfdfdf;
+        padding-bottom: 8px;
+        position: absolute;
+        bottom: 0px;
+        left: 0px;
+        height: 145px;
+        width: 1440px;
+
+        ul {
+            width: 1440px;
+            height: 125px;
+            position: relative;
+            li {
+                padding-right: 22px;
+                img {
+                    width: 158px;
+                    height: 114px;
+                }
+            }
+        }
+
+    }
+}

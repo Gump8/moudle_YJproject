@@ -1,6 +1,12 @@
 $(function () {
     /******************** 注册  注册  注册   *******/
 
+    //让头部菜单隐藏
+    setTimeout(function () {
+        $('.allgoods').css('display','none')
+    },500);
+
+
         //获取 jQuery 对象
     var $tel = $('#tel');
     var $email = $('#email');

@@ -4,6 +4,32 @@ ul { list-style: none; }
 
 a { text-decoration: none; }
 
+#carp { z-index: 999; position: relative; top: -178px; left: 930px; color: #989898; }
+
+#carp span { cursor: pointers; width: 20px; height: 20px; display: inline-block; background-color: #eee; border-radius: 50%; }
+
+#sleft { position: relative; top: -118px; left: 295px; }
+
+#sright { position: relative; top: -147px; left: 995px; }
+
+.Hcarousel { width: 720px; height: 422px; position: absolute; z-index: -1; top: 172px; left: 290px; overflow: hidden; }
+
+.Hcarousel li { float: left; overflow: hidden; }
+
+.Hcarousel > * { overflow: hidden; float: left; }
+
+.Hcarousel .carouselIMG { border: 1px solid #dfdfdf; width: 720px; height: 278px; }
+
+.Hcarousel .carouselIMG ul { position: relative; width: 2160px; height: 278px; }
+
+.Hcarousel .carSmall { border: 1px solid #dfdfdf; padding-bottom: 8px; position: absolute; bottom: 0px; left: 0px; height: 145px; width: 1440px; }
+
+.Hcarousel .carSmall ul { width: 1440px; height: 125px; position: relative; }
+
+.Hcarousel .carSmall ul li { padding-right: 22px; }
+
+.Hcarousel .carSmall ul li img { width: 158px; height: 114px; }
+
 .headTop { margin: 0px auto; }
 
 .headTop .wrap { width: 1210px; margin: 0px auto; }
@@ -54,15 +80,15 @@ a { text-decoration: none; }
 
 .headTop .headerNav .headNav ul li:last-child a { color: #f00; }
 
-.headTop .headerNav .allgoods { border: 2px solid red; width: 210px; max-height: 415px; }
+.headTop .headerNav .allgoods { border: 2px solid red; width: 210px; height: 430px; }
 
-.headTop .headerNav .allgoods p { width: 197px; height: 33px; line-height: 33px; font-size: 14px; border-bottom: #fefefe 1px solid; font-weight: bold; cursor: pointer; background-color: #f9f9f9; color: #c82324; padding-left: 9px; margin-left: 2px; }
+.headTop .headerNav .allgoods p { width: 197px; height: 31px; line-height: 31px; font-size: 14px; border-bottom: #fefefe 1px solid; font-weight: bold; cursor: pointer; background-color: #f9f9f9; color: #c82324; padding-left: 9px; margin-left: 2px; }
 
 .headTop .headerNav .allgoods ul { color: #7e7e7e; font-size: 12px; font-weight: normal; line-height: 29px; }
 
 .headTop .headerNav .allgoods ul li { padding-left: 20px; position: relative; z-index: 99; }
 
-.headTop .headerNav .allgoods ul div { display: none; width: 515px; height: 245px; border: 1px solid red; position: absolute; z-index: 98; top: 42px; left: 209px; }
+.headTop .headerNav .allgoods ul div { display: none; width: 515px; height: 245px; border: 1px solid red; position: absolute; background-color: white; z-index: 98; top: 42px; left: 209px; }
 
 .headTop .headerNav .allgoods ul div span:first-child { padding-left: 20px; }
 
@@ -115,3 +141,89 @@ a { text-decoration: none; }
 #loginReg #register div:last-child input { width: 12px; height: 12px; }
 
 #loginReg #register div:last-child span { font-size: 12px; }
+
+.second { position: relative; overflow: hidden; width: 945px; height: 265px; margin: 8px 0px 8px 68px; border: 1px solid #dfdfdf; border-top: none; }
+
+.second p { border-bottom: 2px solid #a9a9a9; }
+
+.second p span { position: relative; top: 2px; text-align: center; display: inline-block; width: 188px; font-size: 14px; color: #323232; font-weight: bold; line-height: 35px; margin-left: 2px; cursor: pointer; }
+
+.second2 { position: relative; border: 1px solid #dfdfdf; width: 945px; height: 265px; margin-left: 68px; }
+
+.second2 p { padding-left: 20px; line-height: 32px; color: #c82324; font-size: 14px; font-weight: bold; border-bottom: 2px solid #a9a9a9; }
+
+.sidebar { position: absolute; width: 265px; height: 970px; top: 170px; right: 68px; }
+
+.sidebar > * { width: 260px; border: 1px solid #dfdfdf; margin-bottom: 10px; }
+
+.sidebar > * p { padding-left: 5px; font-size: 14px; line-height: 30px; color: #333; height: 30px; border: #dfdfdf 1px solid; background-color: #ededed; font-weight: bolder; }
+
+.sidebar .side1 { height: 160px; }
+
+.sidebar .side2 { height: 170px; }
+
+.sidebar .side3 { height: 230px; }
+
+.sidebar .side4 { height: 135px; }
+
+.sidebar .side5 { height: 165px; }
+
+.mainULcontent { position: relative; width: 1000px; }
+
+.mainULcontent ul { overflow: hidden; margin-top: 2px; position: absolute; top: 0px; left: 0px; }
+
+.mainULcontent ul li { overflow: hidden; width: 187px; height: 232px; padding-right: 10px; float: left; border-right: 1px dashed #ccc; }
+
+.mainULcontent ul li:last-child { border-right: none; }
+
+.mainULcontent ul li:hover { border-bottom: #ccc 2px solid; }
+
+.mainULcontent ul li img { width: 175px; height: 175px; }
+
+.mainULcontent ul li p { font-size: 12px; border: none; margin: 0px; padding: 0px; line-height: normal; text-align: left; padding-left: 10px; }
+
+.mainULcontent ul li p span { font-size: 12px; text-align: left; }
+
+.floor { border: 1px solid #dfdfdf; margin: 10px auto; width: 1210px; height: 523px; }
+
+.floor > * { float: left; }
+
+.floor .floorLeft { border: 1px solid #dfdfdf; width: 208px; height: 523px; }
+
+.floor .floorLeft p { height: 32px; line-height: 32px; color: #FFF; font-size: 14px; padding-left: 12px; }
+
+.floor .floorLeft ul { margin-left: 15px; margin-top: 15px; }
+
+.floor .floorLeft ul li:first-child { color: #323232; line-height: 23px; font-weight: bold; }
+
+.floor .floorLeft ul li:last-child { color: #323232; line-height: 23px; }
+
+.floor .floorLeft ul li:last-child span { font-size: 12px; }
+
+.floor .floorRight p { border-bottom: 2px solid #a9a9a9; }
+
+.floor .floorRight p span { text-align: center; display: inline-block; width: 188px; font-size: 14px; color: #323232; font-weight: bold; line-height: 35px; margin-left: 2px; cursor: pointer; position: relative; background-color: white; }
+
+.floor .floorRight p span:first-child { top: 2px; border: 1px solid #a9a9a9; border-bottom: none; }
+
+.floor .floorRight .mainULcontent li { margin-bottom: 8px; }
+
+.floor .floorRight .mainULcontent li p { font-size: 12px; border: none; margin: 0px; padding: 0px; line-height: normal; text-align: left; padding-left: 10px; }
+
+.floor .floorRight .mainULcontent li p span { font-size: 12px; text-align: left; border: none; }
+
+.firstFloor .floorLeft { background-color: #feefef; }
+
+.firstFloor .floorLeft p { background-color: #fe6565; }
+
+.secondFloor .floorLeft { background-color: #e2f0fe; }
+
+.secondFloor .floorLeft p { background-color: #3dacea; }
+
+.thirdFloor .floorLeft { background-color: #fce6e7; }
+
+.thirdFloor .floorLeft p { background-color: #ed7333; }
+
+.fourthFloor .floorLeft { background-color: #e5e6e8; }
+
+.fourthFloor .floorLeft p { background-color: #59616e; }
