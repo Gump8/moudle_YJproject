@@ -44,7 +44,7 @@
             }
 
 
-            echo json_encode($jsonQuery, JSON_UNESCAPED_UNICODE);
+//            echo json_encode($jsonQuery, JSON_UNESCAPED_UNICODE);
 
 
             //将对象转换成 json 格式的字符并打印出来
@@ -60,7 +60,8 @@
 
         //关闭连接
         mysqli_close($con);
-        return $jsonQuery;
+//        return $jsonQuery;
+        return json_encode($jsonQuery, JSON_UNESCAPED_UNICODE);
     };
 
     //执行逻辑语句

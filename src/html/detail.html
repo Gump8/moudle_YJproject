@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>detail</title>
+    <script src="../assets/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/YJ.css">
+
+    <!--加载头尾 的html代码-->
+    <script src="../js/HeadFoot.js"></script>
+
+    <!--判断当前是否有客户登录  并插入账户名-->
+    <script src="../js/homeJudgeLog.js"></script>
+
+    <!--点击 登录注册 或 退出-->
+    <script src="../js/inOut.js"></script>
+
+    <!--头部菜单-->
+    <script src="../js/headNav.js"></script>
+
+    <script>
+        ;$(function () {
+            var goodsIndex = window.location.search.split('=')[1];
+
+
+            //设为同步
+            // $.ajaxSetup({
+            //     async : false
+            // });
+            $.post('../php/detail.php',{goodsIdx:goodsIndex},function (data) {
+                console.log(data)
+                var goodsDetail = eval('(' + data + ')');
+                console.log(goodsDetail)
+                if(goodsDetail.state){
+                    console.log(goodsDetail.message)
+                }
+            });
+            console.log(goodsIndex);
+        });
+    </script>
+</head>
+<body>
+<header id="index_header" class="headTop"> </header>
+
+<footer id="index_footer" class="footBottom"> </footer>
+</body>
+</html>
