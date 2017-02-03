@@ -227,3 +227,49 @@ a { text-decoration: none; }
 .fourthFloor .floorLeft { background-color: #e5e6e8; }
 
 .fourthFloor .floorLeft p { background-color: #59616e; }
+
+.goodsList { margin: auto; width: 1210px; }
+
+.goodsList .listHeader { padding: 8px 16px; color: #aa0009; font-size: 15px; font-weight: bold; background-color: #fff0f1; border-top: 2px solid  #ed969a; }
+
+.goodsList .goodsWrap { width: 1200px; margin: 8px auto; overflow: hidden; }
+
+.goodsList .goodsWrap .leftBar { float: left; border: 1px solid #dfdfdf; width: 190px; }
+
+.goodsList .goodsWrap .goodsContent { float: right; width: 990px; border: 1px solid #dfdfdf; }
+
+.goodsList .goodsWrap .goodsContent .goodsStyle ul { margin: 10px; overflow: hidden; font-size: 12px; color: red; }
+
+.goodsList .goodsWrap .goodsContent .goodsStyle ul > * { float: left; }
+
+.goodsList .goodsWrap .goodsContent .goodsStyle ul li { cursor: pointer; padding: 2px 8px; border-radius: 2px; margin: 0px 1px; }
+
+.goodsList .goodsWrap .goodsContent .goodsStyle ul li:hover { color: white; background-color: red; }
+
+.goodsList .goodsWrap .goodsContent .goodsStyle ul li:first-of-type { color: white; background-color: red; }
+
+.goodsList .goodsWrap .goodsContent .goodsStyle ul:last-child { margin: 0px; border: 1px solid #dfdfdf; padding: 8px 0px 0px 8px; }
+
+.goodsList .goodsWrap .goodsContent .goodsStyle ul:last-child span { padding-top: 20px; }
+
+.goodsList .goodsWrap .goodsContent .goodsStyle ul:last-child li { padding: 8px; margin: 5px 5px 2px 5px; border: 1px solid #afafdf; border-radius: 4px; }
+
+.goodsList .goodsWrap .goodsContent .goodsStyle ul:last-child li:first-of-type { color: red; background-color: white; }
+
+.goodsList .goodsWrap .goodsContent .goodsStyle ul:last-child li:last-child { float: right; }
+
+.goodsList .goodsWrap .goodsContent .goodsIt ul { overflow: hidden; }
+
+.goodsList .goodsWrap .goodsContent .goodsIt ul img { width: 175px; height: 175px; float: left; }
+
+.goodsList .goodsWrap .goodsContent .goodsIt ul li { float: left; border-bottom: #f2f2f2 1px solid; margin: 0px 16px 16px 0px; list-style-type: none; width: 180px; height: 320px; }
+
+.goodsList .goodsWrap .goodsContent .goodsIt ul li ul { width: 194px; height: 135px; float: left; overflow: hidden; font-size: 13px; }
+
+.goodsList .goodsWrap .goodsContent .goodsIt ul li ul li { height: auto; float: none; margin: 7px 0px; padding: 0px; border: none; }
+
+.goodsList .goodsWrap .goodsContent .goodsIt ul li ul li:first-child { height: 36px; overflow: hidden; }
+
+.goodsList .goodsWrap .goodsContent .goodsIt ul li ul li:nth-child(2) { margin-left: 10px; color: #aa0009; font-size: 18px; font-weight: bold; }
+
+.goodsList .goodsWrap .goodsContent .goodsIt ul li ul li:nth-child(3) { color: #ff6600; }

@@ -79,6 +79,7 @@
     }
 
     .headerNav {
+
         position: relative;
         .headNav {
             position: relative;
@@ -543,4 +544,130 @@
         ul {
         }
     }
+}
+
+.goodsList {
+    margin:auto;
+    //height: 2996px;
+    width: 1210px;
+    .listHeader {
+        padding: 8px 16px;
+        color: #aa0009;
+        font-size: 15px;
+        font-weight: bold;
+        background-color:#fff0f1;
+        border-top: 2px solid  #ed969a;
+    }
+    .goodsWrap {
+        width: 1200px;
+        margin: 8px auto;
+        overflow: hidden;
+
+        .leftBar {
+            float:left;
+            border: 1px solid #dfdfdf;
+            width: 190px;
+        }
+        .goodsContent {
+            float: right;
+            width: 990px;
+            border: 1px solid #dfdfdf;
+
+            .goodsStyle {
+                ul {
+                    margin: 10px;
+                    overflow: hidden;
+                    font-size: 12px;
+                    color: red;
+                    & > * {
+                        float: left;
+                    }
+                    li {
+                        cursor: pointer;
+                        padding: 2px 8px;
+                        border-radius: 2px;
+                        margin: 0px 1px;
+                        &:hover {
+                            color: white;
+                            background-color: red;
+                        }
+                    }
+                    li:first-of-type{
+                        color: white;
+                        background-color: red;
+                    }
+                    &:last-child {
+                        span {
+                            padding-top: 20px;
+                        }
+                        margin: 0px;
+                        border: 1px solid #dfdfdf;
+                        padding: 8px 0px 0px 8px;
+                        li {
+                            padding:8px;
+                            margin: 5px 5px 2px 5px;
+                            border: 1px solid #afafdf;
+                            border-radius: 4px;
+                        }
+                        li:first-of-type {
+                            color: red;
+                            background-color: white;
+                        }
+                        li:last-child {
+                            float: right;
+                        }
+                    }
+                }
+            }
+
+            .goodsIt {
+                ul {
+                    overflow: hidden;
+
+                    img {
+                        width: 175px;
+                        height: 175px;
+                        float: left;
+                    }
+                    li {
+                        float: left;
+                        border-bottom: #f2f2f2 1px solid;
+                        margin: 0px 16px 16px 0px;
+                        list-style-type: none;
+                        width: 180px;
+                        height: 320px;
+
+                        ul {
+                            width: 194px;
+                            height: 135px;
+                            float: left;
+                            overflow: hidden;
+                            font-size: 13px;
+                            li {
+                                height: auto;
+                                float: none;
+                                margin: 7px 0px;
+                                padding:0px;
+                                border: none;
+                            }
+                            li:first-child {
+                                height: 36px;
+                                overflow: hidden;
+                            }
+                            li:nth-child(2) {
+                                margin-left: 10px;
+                                color: #aa0009;
+                                font-size: 18px;
+                                font-weight: bold;
+                            }
+                            li:nth-child(3) {
+                                color: #ff6600;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
 }

@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>goodsList</title>
+    <script src="../assets/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/YJ.css">
+
+    <!--加载头尾 的html代码-->
+    <script src="../js/HeadFoot.js"></script>
+
+    <!--判断当前是否有客户登录  并插入账户名-->
+    <script src="../js/homeJudgeLog.js"></script>
+
+    <!--点击 登录注册 或 退出-->
+    <script src="../js/inOut.js"></script>
+
+    <!--头部菜单-->
+    <script src="../js/headNav.js"></script>
+    
+    <!--列表页-->
+    <script src="../js/goodsList.js"></script>
+    
+    <style>
+        .allgoods {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+<header id="index_header" class="headTop"> </header>
+
+<div class="goodsList">
+    <div class="goodsWrap">
+        <div class="leftBar">
+            <p class="listHeader">家居百货</p>
+        </div>
+        <div class="goodsContent">
+            <p class="listHeader">共  个商品</p>
+
+            <div class="goodsStyle">
+                <ul>
+                    <span>品　　牌：</span>
+                    <li>全部</li>
+                    <li>麦库气</li>
+                    <li>麦库气</li>
+                    <li>麦库气</li>
+                    <li>麦库气</li>
+                    <li>麦库气</li>
+                </ul>
+                <ul>
+                    <span>价　　格：</span>
+                    <li>全部</li>
+                    <li>¥1 - ¥500</li>
+                    <li>¥501 - ¥1000</li>
+                    <li>¥1001 - ¥1500</li>
+                    <li>¥1501 - ¥2000</li>
+                    <li>¥2001 - ¥2501</li>
+                </ul>
+                <ul>
+                    <span>类　　别：</span>
+                    <li>全部</li>
+                    <li>品牌直送</li>
+                    <li>常规商品</li>
+                </ul>
+                <ul>
+                    <span>排　　列：</span>
+                    <li>新品</li>
+                    <li>价格</li>
+                    <li>销量</li>
+                    <li>评论</li>
+                    <li>下一页</li>
+                </ul>
+            </div>
+            <div class="goodsIt">
+                <!--ul>(li>(img+ul>(li+.price+.point)))*15-->
+            </div>
+        </div>
+    </div>
+</div>
+
+<footer id="index_footer" class="footBottom"> </footer>
+</body>
+</html>

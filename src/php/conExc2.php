@@ -43,6 +43,10 @@
                 // print_r($obj->email);
             }
 
+
+            echo json_encode($jsonQuery, JSON_UNESCAPED_UNICODE);
+
+
             //将对象转换成 json 格式的字符并打印出来
             //JSON.stringify()
             // if(!$isCheck){
