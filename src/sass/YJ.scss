@@ -680,3 +680,100 @@
     }
 
 }
+
+.detailWrap {
+    overflow: hidden;
+    width: 1210px;
+    height: 465px;
+    margin: 8px auto;
+
+    .detailPath {
+        font-size: 12px;
+        padding-left: 25px;
+    }
+
+
+    .detailMain {
+        overflow: hidden;
+
+            .detailPhoto {
+                width: 333px;
+                height: 450px;
+                float: left;
+            }
+            .goodsMsg {
+                overflow: hidden;
+                width: 860px;
+                height: 450px;
+                float: right;
+                .twoData {
+                    border: 1px solid #dfdfdf;
+                    overflow: hidden;
+                    border-right: none;
+                    border-left: none;
+                    p {
+                        float: left;
+                        padding: 10px;
+                    }
+                    p:first-of-type {
+                        font: bold 16px/26px "微软雅黑","Microsoft YaHei";
+                        color: #000;
+                        max-width: 450px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+
+                    }
+                    P:last-of-type {
+                        color: #999;
+                        line-height: 26px;
+                        padding: 11px 8px;
+                        font-size: 12px;
+                        span {
+                            color: black;
+                            font-weight: bold;
+                        }
+                    }
+                    img {
+                        float: right;
+                        margin: 3px;
+                    }
+                }
+
+                .detailPrice {
+                    color: #999;
+                    span {
+                        color: #aa0009;
+                        font-size: 26px;
+                        font-weight: bold;
+                        padding-left: 5px;
+                    }
+                }
+
+                .Point {
+                    border: 1px solid goldenrod;
+                    font-weight: bolder;
+                    line-height: 42px;
+                    padding-left: 70px;
+
+                    //margin: 3px 30px;
+                }
+                .colorSize {
+                    border: 1px solid #dfdfdf;
+                    margin: 20px 0px 5px 0px;
+                    border-right: none;
+                    border-left: none;
+                }
+                .colorSize, .paid {
+                    color: #999;
+                }
+            }
+
+    }
+
+
+    .goodsIntr {
+
+    }
+
+}

@@ -144,7 +144,7 @@
             $goodsIt.html('<ul>' + goodsListHtml + '</ul>');
 
 
-            /*******      点击跳转至详情页   *****    点击跳转至详情页    ****************/
+    /*******      点击跳转至详情页   *****    点击跳转至详情页    ****************/
 
                 // 获取.goodsIt的子元素的子元素 li
             var $goodsLi = $goodsIt.children().children();
