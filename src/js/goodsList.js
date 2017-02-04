@@ -65,6 +65,7 @@
     //按 价格 或 销量 排序后分页
 /********  点击分页  ******  点击分页   ********  点击分页   ************/
 
+    //按价格 或销量 排序后分页
     $('.btn-group').on('click','button',function () {
         _page = _pageCount * ($(this).text() - 1);
         goodsPost();
@@ -97,13 +98,15 @@
         _priceBoolean = 'false';
     });
 
+
+
 /***************      发送请求数据库内的所有商品信息     *************/
     //设为同步
     // $.ajaxSetup({
     //     async : false
     // });
 
-    // 封装向数据库请求商品信息的函数函数
+    // 封装向数据库请求商品信息的函数
     function goodsPost() {
 
         $.post('../php/goodsList.php', {
@@ -114,6 +117,7 @@
             orderWay:     _orderWay,
             priceBoolean: _priceBoolean,
             priceRange:   _priceRange
+
         }, function (response) {
             //返回的是 string
             var respon = eval('(' + response + ')');
@@ -146,8 +150,11 @@
             var $goodsLi = $goodsIt.children().children();
 
             $goodsLi.on('click', function () {
+
+                //获取属性值 (商品id)
                 var goodsIndex = $(this).attr('data-index');
 
+                //是否能获取到商品的信息  若能,则跳转到该商品的详情页
                 $.post('../php/detail.php', {goodsIdx: goodsIndex}, function (data) {
                     var goodsDetail = eval('(' + data + ')');
                     if (goodsDetail.state) {

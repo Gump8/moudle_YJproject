@@ -22,26 +22,8 @@
     <!--头部菜单-->
     <script src="../js/headNav.js"></script>
 
-    <script>
-        ;$(function () {
-            var goodsIndex = window.location.search.split('=')[1];
-
-
-            //设为同步
-            // $.ajaxSetup({
-            //     async : false
-            // });
-            $.post('../php/detail.php',{goodsIdx:goodsIndex},function (data) {
-                console.log(data)
-                var goodsDetail = eval('(' + data + ')');
-                console.log(goodsDetail)
-                if(goodsDetail.state){
-                    console.log(goodsDetail.message)
-                }
-            });
-            console.log(goodsIndex);
-        });
-    </script>
+    <!--所有商品共同的详情页-->
+    <script src="../js/detail.js"></script>
 </head>
 <body>
 <header id="index_header" class="headTop"> </header>

@@ -4,7 +4,7 @@ $(function () {
     //让头部菜单隐藏
     setTimeout(function () {
         $('.allgoods').css('display','none')
-    },500);
+    },800);
 
 
         //获取 jQuery 对象
