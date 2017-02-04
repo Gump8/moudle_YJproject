@@ -1,64 +1,143 @@
 //列表页
 ;$(function () {
-    //定义全局变量
 
+    //定义全局变量
+    var $goodsIt = $('.goodsIt');
+
+    //排序方式  默认为按id排序
+    var _orderType = 'price';
+
+    //从第几页开始加载  即分页
+    var _page = 0;
+
+    //每页的商品数;
+    var _pageCount = 15;
+
+    //使用 ASC 或 DESC 关键字来设置查询结果是按升序或降序排列
+    //默认升序
+    var _orderWay = 'ASC';
+
+
+/********  点击排序  ******  点击排序   ********  点击排序   ************/
+
+    $('#order').on('click', 'li', function () {
+        if ($(this).index() == 1) {
+
+            //第二次点击改变排序方式
+            if (_orderWay === 'ASC')
+            {
+                _orderWay = 'DESC';
+            }
+            else
+            {
+                _orderWay = 'ASC';
+            }
+
+            //按价格排序
+            _orderType = 'price';
+            goodsPost();
+            console.log(1)
+        }
+        else if ($(this).index() == 2) {
+
+            //第二次点击改变排序方式
+            if (_orderWay === 'ASC')
+            {
+                _orderWay = 'DESC';
+            }
+            else
+            {
+                _orderWay = 'ASC';
+            }
+
+            // 按销量排序
+            _orderType = 'sale';
+            goodsPost();
+            console.log(1)
+        }
+    });
+
+
+/********  点击分页  ******  点击分页   ********  点击分页   ************/
+
+    $('.btn-group').on('click','button',function () {
+        _page = _pageCount * ($(this).text() - 1);
+        goodsPost();
+    });
+
+    /*****  点击下一页  ****  点击下一页  *****/
+
+    $('#nextPage').on('click',function () {
+        _page += _pageCount;
+        if (_page >= 45)
+        {
+            _page = 0;
+        }
+        goodsPost();
+    });
+
+/***************      发送请求数据库内的所有商品信息     *************/
     //设为同步
     // $.ajaxSetup({
     //     async : false
     // });
 
-/***************      发送请求数据库内的所有商品信息     *************/
-    $.post('../php/goodsList.php', {goodsList: true}, function (response) {
+    // 封装向数据库请求商品信息的函数函数
+    function goodsPost() {
 
-        //返回的是 string
-        var respon = eval('(' + response + ')');
-        var res = ' ';
+        $.post('../php/goodsList.php', {
 
-        //商品列表结构
-        var goodsListHtml = respon.map(function (value, index, array) {
-            //map 返回数组, 每index返回一次
+            orderType: _orderType,
+            page: _page,
+            pageCount: _pageCount,
+            orderWay: _orderWay
 
-            res = '<li '+ ' data-index='+ '"' + value.id + '"'+' >' +
+        }, function (response) {
+            //返回的是 string
+            var respon = eval('(' + response + ')');
+            var res = ' ';
+
+            //商品列表结构
+            var goodsListHtml = respon.map(function (value, index, array) {
+                //map 返回数组, 每index返回一次
+
+                res = '<li ' + ' data-index=' + '"' + value.id + '"' + ' >' +
                         '<img src=' + value.img + '>' +
                         '<ul>' +
-                            '<li>'
-                            + value.descript + '</li>' +
+                            '<li>'+ value.descript + '</li>' +
                             '<li>' + '￥' + value.price + '</li>' +
                             '<li>' + value.point + '</li>' +
+                            '<li>' + '已售: ' + value.sale + '</li>' +
                         '</ul>' +
-                  '</li>';
-            return res;
-        //把map方法返回的数组转为字符串
-        }).join('\n');
+                    '</li>';
+                return res;
+                //把map方法返回的数组转为字符串
+            }).join('\n');
 
-        //写入html页面
-        var $goodsIt = $('.goodsIt');
-        $goodsIt.html('<ul>' + goodsListHtml + '</ul>');
-
-
-/*******      点击跳转至详情页   *****    点击跳转至详情页    ****************/
-        // 获取.goodsIt的子元素的子元素 li
-        var $goodsLi = $goodsIt.children().children();
-
-        $goodsLi.on('click',function () {
-            var goodsIndex = $(this).attr('data-index');
-
-            $.post('../php/detail.php',{goodsIdx:goodsIndex},function (data) {
-                var goodsDetail = eval('(' + data + ')');
-                if(goodsDetail.state){
-                    window.location.href = 'detail.html?id='+ goodsIndex;
-                }
-            });
-        })
-    });
+            //写入html页面
+            $goodsIt.html('<ul>' + goodsListHtml + '</ul>');
 
 
-/********  点击分页  ***********8***  点击分页   ************/
+            /*******      点击跳转至详情页   *****    点击跳转至详情页    ****************/
 
-    var orderType = '';
-    $('#order').on('click','li',function () {
-        console.log($(this).index())
-    })
+                // 获取.goodsIt的子元素的子元素 li
+            var $goodsLi = $goodsIt.children().children();
+
+            $goodsLi.on('click', function () {
+                var goodsIndex = $(this).attr('data-index');
+
+                $.post('../php/detail.php', {goodsIdx: goodsIndex}, function (data) {
+                    var goodsDetail = eval('(' + data + ')');
+                    if (goodsDetail.state) {
+                        window.location.href = 'detail.html?id=' + goodsIndex;
+                    }
+                });
+            })
+        });
+
+    };
+
+    goodsPost();
 
 
 });
