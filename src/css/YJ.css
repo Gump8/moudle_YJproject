@@ -273,3 +273,7 @@ a { text-decoration: none; }
 .goodsList .goodsWrap .goodsContent .goodsIt ul li ul li:nth-child(2) { margin-left: 10px; color: #aa0009; font-size: 18px; font-weight: bold; }
 
 .goodsList .goodsWrap .goodsContent .goodsIt ul li ul li:nth-child(3) { color: #ff6600; }
+
+.goodsList .goodsWrap .goodsContent .btn-group { position: relative; left: 413px; top: -16px; }
+
+.goodsList .goodsWrap .goodsContent .btn-group .btn-default { margin: 0px 4px; }

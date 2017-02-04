@@ -6,7 +6,8 @@
     // $.ajaxSetup({
     //     async : false
     // });
-    //发送请求数据库内的所有商品信息
+
+/***************      发送请求数据库内的所有商品信息     *************/
     $.post('../php/goodsList.php', {goodsList: true}, function (response) {
 
         //返回的是 string
@@ -34,6 +35,8 @@
         var $goodsIt = $('.goodsIt');
         $goodsIt.html('<ul>' + goodsListHtml + '</ul>');
 
+
+/*******      点击跳转至详情页   *****    点击跳转至详情页    ****************/
         // 获取.goodsIt的子元素的子元素 li
         var $goodsLi = $goodsIt.children().children();
 
@@ -48,5 +51,14 @@
             });
         })
     });
+
+
+/********  点击分页  ***********8***  点击分页   ************/
+
+    var orderType = '';
+    $('#order').on('click','li',function () {
+        console.log($(this).index())
+    })
+
 
 });

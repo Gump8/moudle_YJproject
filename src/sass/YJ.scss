@@ -667,6 +667,15 @@
                     }
                 }
             }
+
+            .btn-group {
+                position: relative;
+                left: 413px;
+                top: -16px;
+                .btn-default {
+                    margin: 0px 4px;
+                }
+            }
         }
     }
 
