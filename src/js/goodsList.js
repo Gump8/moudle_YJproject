@@ -5,7 +5,7 @@
     var $goodsIt = $('.goodsIt');
 
     //排序方式  默认为按id排序
-    var _orderType = 'price';
+    var _orderType = 'id';
 
     //从第几页开始加载  即分页
     var _page = 0;
@@ -14,8 +14,13 @@
     var _pageCount = 15;
 
     //使用 ASC 或 DESC 关键字来设置查询结果是按升序或降序排列
-    //默认升序
+    //默认升序 ASC
     var _orderWay = 'ASC';
+
+    //是否按价格区间获取内容;
+    var _priceBoolean = 'false';
+    var _priceRange = '';
+
 
 
 /********  点击排序  ******  点击排序   ********  点击排序   ************/
@@ -57,13 +62,15 @@
         }
     });
 
-
+    //按 价格 或 销量 排序后分页
 /********  点击分页  ******  点击分页   ********  点击分页   ************/
 
     $('.btn-group').on('click','button',function () {
         _page = _pageCount * ($(this).text() - 1);
         goodsPost();
     });
+
+
 
     /*****  点击下一页  ****  点击下一页  *****/
 
@@ -74,6 +81,20 @@
             _page = 0;
         }
         goodsPost();
+    });
+
+
+
+    /*****  按价格区间获取内容  ****  按价格区间获取内容  *****/
+    $('#pricerange').on('click','li',function () {
+
+        var index = $(this).index();
+        _priceBoolean = 'true';
+        _priceRange = 'price >= '+ (1 + 500 * (index - 2)) +
+                       ' and ' + 'price <= ' + 500 * (index - 1);
+        goodsPost();
+
+        _priceBoolean = 'false';
     });
 
 /***************      发送请求数据库内的所有商品信息     *************/
@@ -87,11 +108,12 @@
 
         $.post('../php/goodsList.php', {
 
-            orderType: _orderType,
-            page: _page,
-            pageCount: _pageCount,
-            orderWay: _orderWay
-
+            orderType:    _orderType,
+            page:         _page,
+            pageCount:    _pageCount,
+            orderWay:     _orderWay,
+            priceBoolean: _priceBoolean,
+            priceRange:   _priceRange
         }, function (response) {
             //返回的是 string
             var respon = eval('(' + response + ')');
