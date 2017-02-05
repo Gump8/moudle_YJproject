@@ -7,8 +7,8 @@
     $goodsImg = "'".$_POST['goodsImg']."'";
     $goodsDes = "'".$_POST['goodsDes']."'";
 
+    ////////////////////////
     $test = $_POST['test'];
-
 
     $goodsNum = 1;
 
@@ -34,6 +34,7 @@
                     " and goods_num >= 1;";
         $existResult = queryExist($sqlExist);
 
+//        if ($existResult[0]->goods_num == 1 && $test != undefined)
         //更新 加1
         $updateNum = $existResult[0]->goods_num + 1;
 

@@ -327,9 +327,9 @@ a { text-decoration: none; }
 
 .cartAll div .cartGoods div div { display: inline-block; }
 
-.cartAll div .cartGoods div div:first-child { border: none; width: 460px; overflow: hidden; text-align: left; }
+.cartAll div .cartGoods div div:first-child { padding-left: 30px; border: none; width: 460px; overflow: hidden; text-align: left; }
 
-.cartAll div .cartGoods div div:first-child p:first-of-type { max-width: 375px; height: 20px; overflow: hidden; }
+.cartAll div .cartGoods div div:first-child p:first-of-type { max-width: 340px; height: 20px; overflow: hidden; }
 
 .cartAll div .cartGoods div div:first-child img { margin-right: 10px; margin-top: 10px; float: left; width: 52px; height: 52px; }
 
@@ -341,7 +341,7 @@ a { text-decoration: none; }
 
 .cartAll div .cartGoods div div:last-child span, .cartAll div .cartGoods div div:last-child p:last-child { cursor: pointer; padding: 2px; }
 
-.cartAll div .cartGoods div div:last-child p:nth-child(2) { padding-left: 137px; padding-right: 50px; }
+.cartAll div .cartGoods div div:last-child p:nth-child(2) { padding-left: 137px; padding-right: 50px; width: 250px; }
 
 .cartAll div .allPrice { border-right: #f6f6f6; height: 40px; line-height: 40px; font-size: 20px; padding-left: 420px; }
 

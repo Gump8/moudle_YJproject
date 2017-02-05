@@ -810,12 +810,13 @@
                   display: inline-block;
               }
               div:first-child {
+                  padding-left: 30px;
                   border: none;
                   width: 460px;
                   overflow: hidden;
                   text-align: left;
                   p:first-of-type {
-                      max-width: 375px;
+                      max-width: 340px;
                       height: 20px;
                       overflow: hidden;
                   }
@@ -847,6 +848,7 @@
                   p:nth-child(2) {
                       padding-left: 137px;
                       padding-right: 50px;
+                      width: 250px;
                   }
               }
           }
