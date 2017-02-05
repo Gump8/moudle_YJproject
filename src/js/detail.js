@@ -100,7 +100,7 @@
     $('p', '.Point').text(goodsPoint);
 
     //加入购物车
-    $('#chooseIt').on('click', function () {
+    $('#chooseIt').add($('.buyNow')).on('click', function () {
 
         //判断是否登录
         $.post('../php/judgeLog.php', function (response) {
@@ -117,7 +117,8 @@
                     goodsIdx:   goodsIndex,
                     clientName: _clientName,
                     goodsImg: goodsImg,
-                    goodsPrice: goodsPrice
+                    goodsPrice: goodsPrice,
+                    goodsDes: goodsDes
 
                 }, function (data) {
                     console.log(data)
@@ -136,7 +137,7 @@
 
     //立即购买
     $('#buyIt').on('click', function () {
-
+        window.location.href = 'cart.html'
     });
 
 
