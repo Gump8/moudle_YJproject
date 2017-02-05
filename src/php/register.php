@@ -30,10 +30,24 @@
 
         //判断是否插入成功
         if ($excResult) {
+
             echo "{state: true, message: '注册成功'}";
 
             //注册成功后执行查询语句
             $queryResult = query($sqlCheck);
+
+            //注册成功后 创建相应的保存购物车的表
+            //获取用户名 加 $ 才符合数据库表名的命名规范
+            $loggedClient = "$".($queryResult[0]->tel);
+
+            //创建 表 语句
+            $cartDataList = "CREATE TABLE ". $loggedClient ."( ".
+                                   "id INT NOT NULL AUTO_INCREMENT, ".
+                                   "goods_id INT(11) NOT NULL, ".
+                                   "goods_num INT(11) NOT NULL, ".
+                                   "PRIMARY KEY ( id )); ";
+            //执行创建表 语句
+            excute($cartDataList);
 
             //根据查询结果  保存登录状态
             if (count($queryResult) > 0) {

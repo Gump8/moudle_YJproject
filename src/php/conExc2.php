@@ -59,6 +59,43 @@
         return json_encode($jsonQuery, JSON_UNESCAPED_UNICODE);
     };
 
+     //执行查询语句, 返回查询结果
+        function queryExist($sql) {
+
+            //获取连接结果信息
+            $con = connect();
+
+            //执行 sql 脚本，也叫数据库脚本，返回一个结i果集（对象）
+            $result = mysqli_query($con, $sql);
+
+            //定义一个数组, 保存查询结果
+            $jsonQuery = array();
+
+            if ($result) {
+
+                //在结果集中获取对象(逐行获取)
+                while ($obj = mysqli_fetch_object($result))
+                {
+                    $jsonQuery[] = $obj;
+                    // print_r($obj->email);
+                }
+
+                //将对象转换成 json 格式的字符并打印出来
+                //JSON.stringify()
+                // if(!$isCheck){
+                    // echo json_encode($jsonData, JSON_UNESCAPED_UNICODE);
+                // }
+
+                // 释放结果集
+                mysqli_free_result($result);
+            };
+
+            //关闭连接
+            mysqli_close($con);
+            return $jsonQuery;
+//            return json_encode($jsonQuery, JSON_UNESCAPED_UNICODE);
+        };
+
     //执行逻辑语句
     function excute($sql) {
 
