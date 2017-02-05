@@ -63,7 +63,7 @@ a { text-decoration: none; }
 
 .headTop .headSearch .col-lg-6 p { font-size: 12px; }
 
-.headTop .headSearch .SrShop { line-height: 90px; margin-left: 20px; }
+.headTop .headSearch .SrShop { cursor: pointer; line-height: 90px; margin-left: 20px; }
 
 .headTop .headSearch .SrShop > * { display: inline-block; }
 
@@ -310,3 +310,35 @@ a { text-decoration: none; }
 .detailWrap .detailMain .goodsMsg .colorSize { border: 1px solid #dfdfdf; margin: 20px 0px 5px 0px; border-right: none; border-left: none; }
 
 .detailWrap .detailMain .goodsMsg .colorSize, .detailWrap .detailMain .goodsMsg .paid { color: #999; }
+
+.cartAll { width: 1210px; margin: 8px auto; }
+
+.cartAll h1 { margin-left: 20px; }
+
+.cartAll div { border: 1px solid #dfdfdf; }
+
+.cartAll div p { color: #666; font-size: 14px; }
+
+.cartAll div p span:nth-child(1) { padding: 0px 30px; }
+
+.cartAll div p span:nth-child(3) { padding-left: 300px; padding-right: 150px; }
+
+.cartAll div .cartGoods div { overflow: hidden; color: #666; font-size: 14px; }
+
+.cartAll div .cartGoods div div { display: inline-block; }
+
+.cartAll div .cartGoods div div:first-child { border: none; width: 460px; overflow: hidden; text-align: left; }
+
+.cartAll div .cartGoods div div:first-child p:first-of-type { max-width: 375px; height: 16px; overflow: hidden; }
+
+.cartAll div .cartGoods div div:first-child img { margin-right: 10px; margin-top: 4px; float: left; width: 52px; height: 52px; }
+
+.cartAll div .cartGoods div div:last-child { border: none; height: 60px; line-height: 60px; }
+
+.cartAll div .cartGoods div div:last-child > * { display: inline-block; }
+
+.cartAll div .cartGoods div div:last-child input { width: 30px; height: 15px; }
+
+.cartAll div .cartGoods div div:last-child span, .cartAll div .cartGoods div div:last-child p:last-child { cursor: pointer; padding: 0px; }
+
+.cartAll div .cartGoods div div:last-child p:nth-child(2) { padding-left: 137px; padding-right: 50px; }

@@ -115,7 +115,9 @@
 
                     //发送商品的 id
                     goodsIdx:   goodsIndex,
-                    clientName: _clientName
+                    clientName: _clientName,
+                    goodsImg: goodsImg,
+                    goodsPrice: goodsPrice
 
                 }, function (data) {
                     console.log(data)

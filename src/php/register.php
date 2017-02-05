@@ -45,6 +45,8 @@
                                    "id INT NOT NULL AUTO_INCREMENT, ".
                                    "goods_id INT(11) NOT NULL, ".
                                    "goods_num INT(11) NOT NULL, ".
+                                   "goods_price INT(11) NOT NULL, ".
+                                   "goods_img VARCHAR(50) NOT NULL, ".
                                    "PRIMARY KEY ( id )); ";
             //执行创建表 语句
             excute($cartDataList);

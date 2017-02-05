@@ -3,6 +3,8 @@
 
     $goodsId = $_POST['goodsIdx'];
     $clientName = "$".$_POST['clientName'];
+    $goodsPrice = $_POST['goodsPrice'];
+    $goodsImg = "'".$_POST['goodsImg']."'";
 
     $goodsNum = 1;
 
@@ -10,8 +12,8 @@
     $sqlExist = "SELECT * FROM " .$clientName. " WHERE goods_id =" .$goodsId. ';';
 
     //插入数据语句
-    $insertGoods = "INSERT INTO " .$clientName."(goods_id,goods_num) ".
-                    "VALUES(".$goodsId.",".$goodsNum.")";
+    $insertGoods = "INSERT INTO " .$clientName."(goods_id,goods_num,goods_price,goods_img) ".
+                    "VALUES(".$goodsId.",".$goodsNum.",".$goodsPrice.",".$goodsImg.")";
 
 
     //执行查询语句
