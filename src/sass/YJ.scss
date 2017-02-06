@@ -73,6 +73,21 @@
             cursor: pointer;
             line-height: 90px;
             margin-left: 20px;
+            #cartNum {
+                position: absolute;
+                text-align: center;
+                display: block;
+                top: 51px;
+                right: 176px;
+                font-size: 14px;
+                line-height: 20px;
+                color: white;
+                background-color: red;
+                height: 20px;
+                min-width: 20px;
+                border-radius: 6px;
+                z-index: 99999;
+            }
         }
         .SrShop > * {
             display: inline-block;
