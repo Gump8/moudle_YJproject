@@ -1,4 +1,9 @@
-;$(function () {
+
+//商品的操作方式 加减或删除
+;var _type = "up";
+
+$(function () {
+
 
     //让头部菜单隐藏
     setTimeout(function () {
@@ -118,11 +123,12 @@
                     clientName: _clientName,
                     goodsImg: goodsImg,
                     goodsPrice: goodsPrice,
-                    goodsDes: goodsDes
+                    goodsDes: goodsDes,
+                    type: _type
 
                 }, function (data) {
                     console.log(data)
-                })
+                });
             }
             else
             {

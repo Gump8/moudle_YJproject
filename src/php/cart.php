@@ -7,8 +7,8 @@
     $goodsImg = "'".$_POST['goodsImg']."'";
     $goodsDes = "'".$_POST['goodsDes']."'";
 
-    ////////////////////////
-    $test = $_POST['test'];
+    //商品的操作方式 加减或删除
+    $type = $_POST['type'];
 
     $goodsNum = 1;
 
@@ -36,12 +36,34 @@
 
 //        if ($existResult[0]->goods_num == 1 && $test != undefined)
         //更新 加1
-        $updateNum = $existResult[0]->goods_num + 1;
+        if ($type == 'up')
+        {
+            $updateNum = $existResult[0]->goods_num + 1;
+        }
+        else if ($type == 'down')
+        {
+            if ($existResult[0]->goods_num == 1)
+            {
+                $updateNum = 1;
+            }
+            else
+            {
+                $updateNum = $existResult[0]->goods_num - 1;
+            }
+        }
 
         //更新 脚本
-        $updateSql = "UPDATE " .$clientName.
-                     " SET goods_num = " .$updateNum.
-                     " WHERE goods_id = " .$goodsId. ";";
+        if ($type == 'delete')
+        {
+            $updateSql = "DELETE FROM " .$clientName.
+                         " WHERE goods_id = " .$goodsId. ";";
+        }
+        else
+        {
+            $updateSql = "UPDATE " .$clientName.
+                         " SET goods_num = " .$updateNum.
+                         " WHERE goods_id = " .$goodsId. ";";
+        }
 
         excute($updateSql);
 
