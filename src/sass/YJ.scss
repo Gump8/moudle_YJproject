@@ -95,7 +95,22 @@
     }
 
     .headerNav {
-
+        #homepageTips ,#listpageTips {
+            position: absolute;
+            color: white;
+            background-color: red;
+            border-radius: 4px;
+            width: auto;
+            z-index: 99999;
+        }
+        #homepageTips {
+            top: -8px;
+            left: 210px;
+        }
+        #listpageTips {
+            top: -8px;
+            left: 295px;
+        }
         position: relative;
         .headNav {
             position: relative;
@@ -589,6 +604,17 @@
             width: 990px;
             border: 1px solid #dfdfdf;
 
+            #detailPageTips {
+                z-index: 99999;
+                position: absolute;
+                color: white;
+                background-color: red;
+                width: auto;
+                font-size: 14px;
+                border-radius: 3px;
+                top: 344px;
+                left: 511px;
+            }
             .goodsStyle {
                 ul {
                     margin: 10px;
@@ -631,6 +657,8 @@
                         }
                         li:last-child {
                             float: right;
+                            position: relative;
+                            right: 180px;
                         }
                     }
                 }

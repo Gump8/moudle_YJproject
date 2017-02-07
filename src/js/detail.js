@@ -60,18 +60,18 @@ $(function () {
             goodsImg3 = goodsDetailMsg[0].img3;
             goodsImg4 = goodsDetailMsg[0].img4;
 
-            console.log(
-                [goodsID,
-                    goodsPrice,
-                    goodsSale,
-                    goodsDes,
-                    goodsPoint,
-                    goodsImg,
-                    goodsImg1,
-                    goodsImg2,
-                    goodsImg3,
-                    goodsImg4].join('\n')
-            )
+            // console.log(
+            //     [goodsID,
+            //         goodsPrice,
+            //         goodsSale,
+            //         goodsDes,
+            //         goodsPoint,
+            //         goodsImg,
+            //         goodsImg1,
+            //         goodsImg2,
+            //         goodsImg3,
+            //         goodsImg4].join('\n')
+            // )
         }
     });
 
@@ -127,12 +127,14 @@ $(function () {
                     type: _type
 
                 }, function (data) {
-                    console.log(data)
+
                 });
             }
             else
             {
-                alert('尊敬的客户,请先登录!')
+                alert('尊敬的客户,请先登录!');
+                window.location.href = 'loginReg.html';
+
             }
 
         });

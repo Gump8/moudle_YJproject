@@ -45,7 +45,8 @@ $(function () {
                 _clientName = resJson.clientName;
             }
             else {
-                alert('尊敬的用户,请登录!')
+                alert('尊敬的用户,请登录!');
+                window.location.href = 'loginReg.html'
             }
 
         });
@@ -53,7 +54,6 @@ $(function () {
         $.post('../php/cartGetdata.php', {
             clientName: _clientName
         }, function (response) {
-            console.log(response);
 
             //把返回的数据转为 json 数据
             var carts = eval('(' + response + ')');
@@ -128,7 +128,7 @@ $(function () {
             goodsDes: ""
 
         }, function (data) {
-            console.log(data);
+
             getCartNumfn();
             insertCartHTML();
           // location.reload()

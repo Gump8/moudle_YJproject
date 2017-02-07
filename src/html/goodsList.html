@@ -8,6 +8,7 @@
     <title>goodsList</title>
     <script src="../assets/jquery-3.1.1.js"></script>
     <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="iconfont.css">
     <link rel="stylesheet" href="../css/YJ.css">
 
     <!--加载头尾 的html代码-->
@@ -52,7 +53,6 @@
                         _clientName = resJson.clientName;
                     }
                     else {
-                        alert('尊敬的用户,请登录!')
                     }
 
                 });
@@ -60,7 +60,6 @@
                 $.post('../php/cartGetdata.php', {
                     clientName: _clientName
                 }, function (response) {
-                    console.log(response);
 
                     //把返回的数据转为 json 数据
                     var carts = eval('(' + response + ')');
@@ -127,12 +126,14 @@
                 </ul>
                 <ul id="order">
                     <span>排　　列：</span>
-                    <li>价格</li>
-                    <li>销量</li>
+                    <li><img src="../css/img/updown.png" alt="">价格</li>
+                    <li><img src="../css/img/updown.png" alt="">销量</li>
 
                     <li id="nextPage">下一页</li>
                 </ul>
+
             </div>
+            <p id="detailPageTips">点击以下任意一商品进入相应的详情页</p>
             <div class="goodsIt">
                 <!--ul>(li>(img+ul>(li+.price+.point)))*15-->
 

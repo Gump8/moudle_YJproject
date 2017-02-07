@@ -71,6 +71,12 @@ a { text-decoration: none; }
 
 .headTop .headerNav { position: relative; }
 
+.headTop .headerNav #homepageTips, .headTop .headerNav #listpageTips { position: absolute; color: white; background-color: red; border-radius: 4px; width: auto; z-index: 99999; }
+
+.headTop .headerNav #homepageTips { top: -8px; left: 210px; }
+
+.headTop .headerNav #listpageTips { top: -8px; left: 295px; }
+
 .headTop .headerNav .headNav { position: relative; background-color: #f7f7f7; font-size: 14px; font-weight: bold; border-top: 1px solid #dfdfdf; }
 
 .headTop .headerNav .headNav ul { border-color: red; }
@@ -241,6 +247,8 @@ a { text-decoration: none; }
 
 .goodsList .goodsWrap .goodsContent { float: right; width: 990px; border: 1px solid #dfdfdf; }
 
+.goodsList .goodsWrap .goodsContent #detailPageTips { z-index: 99999; position: absolute; color: white; background-color: red; width: auto; font-size: 14px; border-radius: 3px; top: 344px; left: 511px; }
+
 .goodsList .goodsWrap .goodsContent .goodsStyle ul { margin: 10px; overflow: hidden; font-size: 12px; color: red; }
 
 .goodsList .goodsWrap .goodsContent .goodsStyle ul > * { float: left; }
@@ -259,7 +267,7 @@ a { text-decoration: none; }
 
 .goodsList .goodsWrap .goodsContent .goodsStyle ul:last-child li:first-of-type { color: red; background-color: white; }
 
-.goodsList .goodsWrap .goodsContent .goodsStyle ul:last-child li:last-child { float: right; }
+.goodsList .goodsWrap .goodsContent .goodsStyle ul:last-child li:last-child { float: right; position: relative; right: 180px; }
 
 .goodsList .goodsWrap .goodsContent .goodsIt ul { overflow: hidden; }
 

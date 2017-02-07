@@ -54,7 +54,6 @@
                         _clientName = resJson.clientName;
                     }
                     else {
-                        alert('尊敬的用户,请登录!')
                     }
 
                 });
@@ -62,7 +61,6 @@
                 $.post('../php/cartGetdata.php', {
                     clientName: _clientName
                 }, function (response) {
-                    console.log(response);
 
                     //把返回的数据转为 json 数据
                     var carts = eval('(' + response + ')');
