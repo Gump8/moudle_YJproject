@@ -1,5 +1,16 @@
 <?php
     //    session_start();  //  不能重复
+
+
+    $status = session_status();
+
+    if (!($status == PHP_SESSION_ACTIVE))
+    {
+
+        //Destroy current and start new one
+//        session_destroy();
+        session_start();
+    }
 /*****************     判断是否在  登录状态  *********************/
 
 

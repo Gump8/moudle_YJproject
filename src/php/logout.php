@@ -1,5 +1,17 @@
 <?php
+
 //    session_start();
+
+
+        $status = session_status();
+
+        if (!($status == PHP_SESSION_ACTIVE))
+        {
+
+            //Destroy current and start new one
+    //        session_destroy();
+            session_start();
+        }
 
     	if(isset($_SESSION['logged']))
     	{

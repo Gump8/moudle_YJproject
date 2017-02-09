@@ -53,15 +53,42 @@
             excute($cartDataList);
 
             //根据查询结果  保存登录状态
-            if (count($queryResult) > 0) {
+            if (count($queryResult) > 0)
+            {
 
                 //删除原有的  session_start();
-                session_destroy();
-                session_start();
+//                session_destroy();
+//                session_start();
+
+                $status = session_status();
+
+                if($status == PHP_SESSION_NONE)
+                {
+
+                    //There is no active session
+                    session_start();
+
+                }
+                else if ($status == PHP_SESSION_DISABLED)
+                {
+
+                    //Sessions are not available
+
+                }
+                else if ($status == PHP_SESSION_ACTIVE)
+                {
+
+                    //Destroy current and start new one
+                    session_destroy();
+                    session_start();
+                }
+
                 $_SESSION["logged"] = ($queryResult[0]->tel);
             }
 
-        } else {
+        }
+        else
+        {
             echo "{state: false, message: '注册失败'}";
         }
     }

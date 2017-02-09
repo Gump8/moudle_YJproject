@@ -1,0 +1,27 @@
+{
+  "name": "moudle_yjproject",
+  "version": "1.0.0",
+  "description": "moudle requirejs",
+  "main": "gulpfile.js",
+  "dependencies": {
+    "gulp": "^3.9.1",
+    "gulp-sass-china": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Gump8/moudle_YJproject.git"
+  },
+  "keywords": [
+    "requirejs"
+  ],
+  "author": "LDF",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gump8/moudle_YJproject/issues"
+  },
+  "homepage": "https://github.com/Gump8/moudle_YJproject#readme"
+}
