@@ -1,7 +1,7 @@
-requirejs.cofig({
+requirejs.config({
 
     //基始路径
-    baseUrl: 'js',
+    baseUrl: '../jsLib',
 
     //设置路径 别名
     paths : {
@@ -10,7 +10,9 @@ requirejs.cofig({
         'jquery': '../assets/jquery-3.1.1',
         'home': 'mdHome',
         'list': 'mdList',
-        'detail': 'mdDetail'
+        'detail': 'mdDetail',
+        'HF': 'HeadFoot'
+
     },
 
     //设置加载非difine的 普通文件

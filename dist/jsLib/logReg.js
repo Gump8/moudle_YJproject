@@ -1,10 +1,11 @@
+
 $(function () {
     /******************** 注册  注册  注册   *******/
 
     //让头部菜单隐藏
-    setTimeout(function () {
+  /*  setTimeout(function () {
         $('.allgoods').css('display','none')
-    },800);
+    },800);*/
 
 
         //获取 jQuery 对象

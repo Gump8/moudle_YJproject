@@ -157,9 +157,9 @@ a { text-decoration: none; }
 
 .mainwrap .second p span { position: relative; top: 2px; text-align: center; display: inline-block; width: 188px; font-size: 14px; color: #323232; font-weight: bold; line-height: 35px; margin-left: 2px; cursor: pointer; }
 
-.mainwrap .second2 { float: left; overflow: hidden; position: relative; border: 1px solid #dfdfdf; width: 940px; height: 275px; margin: 0px; }
+.mainwrap .second, .mainwrap .second2 { float: left; overflow: hidden; position: relative; border: 1px solid #dfdfdf; width: 940px; height: 275px; margin: 0px; }
 
-.mainwrap .second2 p { padding-left: 20px; line-height: 32px; color: #c82324; font-size: 14px; font-weight: bold; border-bottom: 2px solid #a9a9a9; }
+.mainwrap .second p, .mainwrap .second2 p { padding-left: 20px; line-height: 32px; color: #c82324; font-size: 14px; font-weight: bold; border-bottom: 2px solid #a9a9a9; }
 
 .mainwrap .sidebar { overflow: hidden; float: right; width: 260px; height: 970px; margin-left: 10px; }
 

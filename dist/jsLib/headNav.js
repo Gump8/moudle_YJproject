@@ -1,6 +1,8 @@
 
-
-$(function () {
+// define (['jquery'],function ($) {
+    
+});
+;$(function () {
     setTimeout(function () {
         var $ul = $('ul','.allgoods');
         $ul.not('.firstUl').css('display','none');
