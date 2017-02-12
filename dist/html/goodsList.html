@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>goodsList</title>
+    <script src="../assets/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="iconfont.css">
+    <link rel="stylesheet" href="../css/YJ.css">
+
+    <!--加载头尾 的html代码-->
+    <script src="../js/HeadFoot.js"></script>
+
+    <!--判断当前是否有客户登录  并插入账户名-->
+    <script src="../js/homeJudgeLog.js"></script>
+
+    <!--点击 登录注册 或 退出-->
+    <script src="../js/inOut.js"></script>
+
+    <!--头部菜单-->
+    <script src="../js/headNav.js"></script>
+    
+    <!--列表页-->
+    <script src="../js/goodsList.js"></script>
+
+    <!--跳转到购物车结算页-->
+    <script src="../js/jumpCart.js"></script>
+
+    <script>
+        setInterval(function () {
+            var cartNum;
+            function getGoodsNumfn() {
+                //根据 用户名获取数据库中购物车的数据
+                _clientName = ' ';
+
+                //设为同步
+                $.ajaxSetup({
+                    async: false
+                });
+
+                //发送POST请求 获取 用户名
+                $.post('../php/judgeLog.php', function (response) {
+
+                    // 转为json数据
+                    var resJson = eval('(' + response + ')');
+
+                    //判断是否已登录
+                    if (resJson.state) {
+                        //延时以获取节点
+                        _clientName = resJson.clientName;
+                    }
+                    else {
+                    }
+
+                });
+
+                $.post('../php/cartGetdata.php', {
+                    clientName: _clientName
+                }, function (response) {
+
+                    //把返回的数据转为 json 数据
+                    var carts = eval('(' + response + ')');
+
+                    //把String数据类型carts.message 转为 array
+                    cartsMsg = eval('(' + carts.message + ')');
+
+                    cartNum = cartsMsg.length;
+
+                });
+            };
+
+            getGoodsNumfn();
+
+            $('#cartNum').text(cartNum)
+        },1000);
+    </script>
+    <style>
+        .allgoods {
+            display: none;
+        }
+    </style>
+
+</head>
+<body>
+<header id="index_header" class="headTop"> </header>
+
+<div class="goodsList">
+    <div class="goodsWrap">
+        <div class="leftBar">
+            <p class="listHeader">家居百货</p>
+        </div>
+        <div class="goodsContent">
+            <p class="listHeader">共  个商品</p>
+
+            <div class="goodsStyle">
+                <ul>
+                    <span>品　　牌：</span>
+                    <li>全部</li>
+                    <li>麦库气</li>
+                    <li>麦库气</li>
+                    <li>麦库气</li>
+                    <li>麦库气</li>
+                    <li>麦库气</li>
+                </ul>
+                <ul id="pricerange">
+                    <span>价　　格：</span>
+                    <li>全部</li>
+                    <li>¥1 - ¥500</li>
+                    <li>¥501 - ¥1000</li>
+                    <li>¥1001 - ¥1500</li>
+                    <li>¥1501 - ¥2000</li>
+                    <li>¥2001 - ¥2501</li>
+                    <li>¥2501 - ¥3001</li>
+                    <li>¥3001 - ¥3501</li>
+                    <li>¥3501 - ¥4001</li>
+                    <li>¥4001 - ¥4501</li>
+                </ul>
+                <ul>
+                    <span>类　　别：</span>
+                    <li>全部</li>
+                    <li>品牌直送</li>
+                    <li>常规商品</li>
+                </ul>
+                <ul id="order">
+                    <span>排　　列：</span>
+                    <li><img src="../css/img/updown.png" alt="">价格</li>
+                    <li><img src="../css/img/updown.png" alt="">销量</li>
+
+                    <li id="nextPage">下一页</li>
+                </ul>
+
+            </div>
+            <p id="detailPageTips">点击以下任意一商品进入相应的详情页</p>
+            <div class="goodsIt">
+                <!--ul>(li>(img+ul>(li+.price+.point)))*15-->
+
+            </div>
+
+            <div class="btn-group" role="group" aria-label="First group">
+                <button type="button" class="btn btn-default">1</button>
+                <button type="button" class="btn btn-default">2</button>
+                <button type="button" class="btn btn-default">3</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<footer id="index_footer" class="footBottom"> </footer>
+</body>
+</html>

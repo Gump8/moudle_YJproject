@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>detail</title>
+    <script src="../assets/jquery-3.1.1.js"></script>
+    <link rel="stylesheet" href="../assets/bootstrap.min.css">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="stylesheet" href="../css/YJ.css">
+
+    <!--放大镜插件-->
+    <script src="../assets/jqzoom.js"></script>
+
+    <!--加载头尾 的html代码-->
+    <script src="../js/HeadFoot.js"></script>
+
+    <!--判断当前是否有客户登录  并插入账户名-->
+    <script src="../js/homeJudgeLog.js"></script>
+
+    <!--点击 登录注册 或 退出-->
+    <script src="../js/inOut.js"></script>
+
+    <!--头部菜单-->
+    <script src="../js/headNav.js"></script>
+
+    <!--所有商品共同的详情页-->
+    <script src="../js/detail.js"></script>
+
+    <!--跳转到购物车结算页-->
+    <script src="../js/jumpCart.js"></script>
+
+    <script>
+        setInterval(function () {
+            var cartNum;
+            function getGoodsNumfn() {
+                //根据 用户名获取数据库中购物车的数据
+                _clientName = ' ';
+
+                //设为同步
+                $.ajaxSetup({
+                    async: false
+                });
+
+                //发送POST请求 获取 用户名
+                $.post('../php/judgeLog.php', function (response) {
+
+                    // 转为json数据
+                    var resJson = eval('(' + response + ')');
+
+                    //判断是否已登录
+                    if (resJson.state) {
+                        //延时以获取节点
+                        _clientName = resJson.clientName;
+                    }
+                    else {
+                    }
+
+                });
+
+                $.post('../php/cartGetdata.php', {
+                    clientName: _clientName
+                }, function (response) {
+
+                    //把返回的数据转为 json 数据
+                    var carts = eval('(' + response + ')');
+
+                    //把String数据类型carts.message 转为 array
+                    cartsMsg = eval('(' + carts.message + ')');
+
+                    cartNum = cartsMsg.length;
+
+                });
+            };
+
+            getGoodsNumfn();
+
+            $('#cartNum').text(cartNum)
+        },1000);
+    </script>
+    <style>
+        .allgoods {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+<header id="index_header" class="headTop"> </header>
+
+<div class="detailWrap">
+    <div class="detailPath">
+        <p>家居百货 > 家居用品 > 贝尊* >（商城专供）（仅限支付宝）</p>
+    </div>
+    <div class="detailMain">
+        <!--轮播图-->
+        <div class="detailPhoto">
+            <div class="etalage_wrap clearfix">
+                <ul id="etalage" class="clearfix">
+                    <li>
+                        <img id="chuang" src=" " class="etalage_thumb_image">
+                        <img id="chuang1" class="etalage_big_image" src=" " />
+                    </li>
+                    <li>
+                        <img id="detailPa" src=" " class="etalage_thumb_image">
+                        <img id="detailPaa" class="etalage_big_image" src=" " />
+                    </li>
+                    <li>
+                        <img id="detailPb" src=" " class="etalage_thumb_image">
+                        <img id="detailPbb" class="etalage_big_image" src=" " />
+                    </li>
+                    <li>
+                        <img id="detailPc" src=" " class="etalage_thumb_image">
+                        <img id="detailPcc" class="etalage_big_image" src=" " />
+                    </li>
+                    <li>
+                        <img id="detailPd" src=" " class="etalage_thumb_image">
+                        <img id="detailPdd" class="etalage_big_image" src=" " />
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="goodsMsg">
+            <div class="twoData">
+                <p class="p"></p>
+                <p class="pid">品号:  <span>  </span>  &nbsp; &nbsp;品牌:  </p>
+                <img src="../img/detail/RTcnico_07.gif" alt="">
+                <img src="../img/detail/RTcnico_09.gif" alt="">
+                <img src="../img/detail/RTcnico_11.gif" alt="">
+            </div>
+            <div class="detailPrice">
+                优惠价: <span></span>
+            </div>
+            <div class="Point">
+                <p></p>
+            </div>
+            <div class="colorSize">
+                <p>选择颜色: </p>
+                <br>
+                <p>选择尺寸: </p>
+                <br>
+            </div>
+            <div class="paid">
+                <P>付款: </P>
+                <P>库存: </P>
+                <P>购买: </P>
+                <br>
+                <br>
+
+            </div>
+
+            <!--加入购物车 和 立即购买 按钮-->
+            <div class="buy">
+                <p>
+                    <button id="buyIt" type="button" class="buyNow btn btn-danger btn-lg">立即购买</button>
+                    <button id="chooseIt" type="button" class="btn btn-primary btn-lg">加入购物袋</button>
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="goodsIntr">
+        <div class="leftSideBar"></div>
+        <div class="goodsIntrMsg"></div>
+    </div>
+</div>
+
+<footer id="index_footer" class="footBottom"> </footer>
+</body>
+</html>
